@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" fill="none">
+  <defs>
+    <linearGradient id="pipBody" x1="16" y1="12" x2="56" y2="62" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#EB8A6D"/>
+      <stop offset="52%" stop-color="#DE7356"/>
+      <stop offset="100%" stop-color="#C15F3C"/>
+    </linearGradient>
+    <linearGradient id="pipBelly" x1="36" y1="40" x2="36" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FAF8F4"/>
+      <stop offset="100%" stop-color="#EDE6DC"/>
+    </linearGradient>
+    <linearGradient id="pipBeak" x1="36" y1="35" x2="36" y2="42" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FCD34D"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <linearGradient id="pipWing" x1="12" y1="32" x2="22" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#D66B4D"/>
+      <stop offset="100%" stop-color="#A94B2B"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="27.5" cy="61.5" rx="5" ry="3" fill="#F59E0B"/>
+  <ellipse cx="44.5" cy="61.5" rx="5" ry="3" fill="#F59E0B"/>
+  <path d="M15.5 34 C9.5 35.5 7.5 43.5 11.5 49.5 C13.5 52.5 17 51.5 18.5 47 Z" fill="url(#pipWing)"/>
+  <path d="M56.5 34 C62.5 35.5 64.5 43.5 60.5 49.5 C58.5 52.5 55 51.5 53.5 47 Z" fill="url(#pipWing)"/>
+  <path d="M36 16 C35 11.5 38.5 8.5 41.5 10.5 C39.5 12.5 38 14 37.5 16 Z" fill="#EB8A6D"/>
+  <path d="M19 23 C14.5 15 17.5 10.5 24 14.5 C26 15.8 26.8 18 26 20.5 Z" fill="#C15F3C"/>
+  <path d="M53 23 C57.5 15 54.5 10.5 48 14.5 C46 15.8 45.2 18 46 20.5 Z" fill="#C15F3C"/>
+  <path d="M14.5 39 C14.5 22.5 23 15 36 15 C49 15 57.5 22.5 57.5 39 C57.5 53.5 48.8 61 36 61 C23.2 61 14.5 53.5 14.5 39 Z" fill="url(#pipBody)"/>
+  <ellipse cx="36" cy="50.5" rx="13.5" ry="9.5" fill="url(#pipBelly)"/>
+  <circle cx="27.5" cy="31.5" r="10.2" fill="#FAF7F2"/>
+  <circle cx="44.5" cy="31.5" r="10.2" fill="#FAF7F2"/>
+  <path d="M27.5 39.5 Q36 43.5 44.5 39.5 L42 32 L30 32 Z" fill="#FAF7F2"/>
+  <ellipse cx="21.2" cy="37.8" rx="3.1" ry="1.8" fill="#FF8298" fill-opacity="0.7"/>
+  <ellipse cx="50.8" cy="37.8" rx="3.1" ry="1.8" fill="#FF8298" fill-opacity="0.7"/>
+  <circle cx="27.5" cy="31.5" r="5.5" fill="#1C1917"/>
+  <circle cx="25.6" cy="29.4" r="2.1" fill="#FFFFFF"/>
+  <circle cx="29.6" cy="33.4" r="0.95" fill="#FFFFFF" fill-opacity="0.9"/>
+  <circle cx="44.5" cy="31.5" r="5.5" fill="#1C1917"/>
+  <circle cx="42.6" cy="29.4" r="2.1" fill="#FFFFFF"/>
+  <circle cx="46.6" cy="33.4" r="0.95" fill="#FFFFFF" fill-opacity="0.9"/>
+  <path d="M36 34.2 C38.6 34.2 39.8 36.2 38.6 38.2 C37.6 39.8 36.7 40.6 36 40.6 C35.3 40.6 34.4 39.8 33.4 38.2 C32.2 36.2 33.4 34.2 36 34.2 Z" fill="url(#pipBeak)"/>
+  <path d="M33.2 41.3 Q36 43.4 38.8 41.3" stroke="#8C3B22" stroke-width="1.7" stroke-linecap="round" fill="none"/>
+</svg>

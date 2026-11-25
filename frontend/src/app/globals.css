@@ -1,0 +1,153 @@
+@import "katex/dist/katex.min.css";
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-crail: #C15F3C;
+  --color-peach: #DE7356;
+  --color-pampas: #F4F3EE;
+  --color-cloudy: #B1ADA1;
+
+  --color-zinc-50: #FFFFFF;
+  --color-zinc-100: #F4F3EE;
+  --color-zinc-200: #E8E6DF;
+  --color-zinc-300: #D4D1C7;
+  --color-zinc-400: #B1ADA1;
+  --color-zinc-500: #8F8B80;
+  --color-zinc-600: #6B675E;
+  --color-zinc-700: #3B3834;
+  --color-zinc-800: #2E2C29;
+  --color-zinc-900: #1C1B19;
+  --color-zinc-950: #141413;
+
+  --color-orange-50: #FDF4F0;
+  --color-orange-100: #FAE5DC;
+  --color-orange-200: #F4C5B3;
+  --color-orange-300: #EA9D84;
+  --color-orange-400: #DE7356;
+  --color-orange-500: #C15F3C;
+  --color-orange-600: #A84E2E;
+  --color-orange-700: #8B3E23;
+  --color-orange-800: #6E301B;
+  --color-orange-900: #522313;
+
+  --color-accent-50: #FDF4F0;
+  --color-accent-100: #FAE5DC;
+  --color-accent-200: #F4C5B3;
+  --color-accent-300: #EA9D84;
+  --color-accent-400: #DE7356;
+  --color-accent-500: #C15F3C;
+  --color-accent-600: #A84E2E;
+  --color-accent-700: #8B3E23;
+  --color-accent-800: #6E301B;
+  --color-accent-900: #522313;
+
+  --animate-fade-in: fade-in 0.25s ease-out both;
+  --animate-slide-in-right: slide-in-right 0.3s ease-out both;
+  --animate-slide-in-up: slide-in-up 0.25s ease-out both;
+  --animate-pulse-dot: pulse-dot 1.4s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+
+  @keyframes fade-in {
+    0% { opacity: 0; transform: translateY(8px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes slide-in-right {
+    0% { opacity: 0; transform: translateX(24px); }
+    100% { opacity: 1; transform: translateX(0); }
+  }
+
+  @keyframes slide-in-up {
+    0% { opacity: 0; transform: translateY(16px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+}
+
+:root { color-scheme: dark; }
+
+/* ── Scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-thumb {
+  background: rgba(193, 95, 60, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover { background: rgba(222, 115, 86, 0.65); }
+
+/* ── Prose / Markdown inside chat ───────────────────────────── */
+.chat-prose { font-size: 0.875rem; line-height: 1.65; }
+.chat-prose h1, .chat-prose h2, .chat-prose h3, .chat-prose h4 {
+  font-weight: 600; margin-top: 1em; margin-bottom: 0.4em; color: #FFFFFF;
+}
+.chat-prose h1 { font-size: 1.1rem; }
+.chat-prose h2 { font-size: 1rem; }
+.chat-prose h3 { font-size: 0.9rem; }
+.chat-prose p { margin-bottom: 0.6em; color: #F4F3EE; }
+.chat-prose ul, .chat-prose ol { padding-left: 1.25em; margin-bottom: 0.6em; }
+.chat-prose li { margin-bottom: 0.2em; color: #F4F3EE; }
+.chat-prose strong { color: #FFFFFF; font-weight: 600; }
+.chat-prose em { color: #B1ADA1; font-style: italic; }
+.chat-prose blockquote {
+  border-left: 3px solid #C15F3C;
+  padding-left: 0.75em;
+  color: #B1ADA1;
+  margin: 0.5em 0;
+}
+.chat-prose code:not(pre code) {
+  background: rgba(193, 95, 60, 0.16);
+  color: #DE7356;
+  padding: 0.1em 0.4em;
+  border-radius: 4px;
+  font-size: 0.82em;
+}
+.chat-prose pre {
+  background: #141413;
+  border: 1px solid #2E2C29;
+  border-radius: 10px;
+  padding: 0.9em 1em;
+  overflow-x: auto;
+  margin-bottom: 0.8em;
+}
+.chat-prose pre code { background: none; color: #F4F3EE; padding: 0; font-size: 0.82em; }
+.chat-prose table {
+  width: 100%; border-collapse: collapse; font-size: 0.8rem; margin-bottom: 0.8em;
+}
+.chat-prose th {
+  background: rgba(193, 95, 60, 0.15);
+  color: #DE7356;
+  font-weight: 600;
+  padding: 0.4em 0.75em;
+  border: 1px solid #2E2C29;
+  text-align: left;
+}
+.chat-prose td {
+  padding: 0.35em 0.75em;
+  border: 1px solid #2E2C29;
+  color: #F4F3EE;
+}
+.chat-prose a { color: #DE7356; text-decoration: underline; }
+.chat-prose hr { border-color: #2E2C29; margin: 0.75em 0; }
+
+/* ── Streaming cursor blink ─────────────────────────────────── */
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+.streaming-cursor::after {
+  content: "▍";
+  display: inline-block;
+  color: #DE7356;
+  animation: blink 0.8s step-end infinite;
+  margin-left: 1px;
+}
+
+/* ── Highlight.js code theme (zinc) ────────────────────────── */
+.hljs { background: transparent !important; }
